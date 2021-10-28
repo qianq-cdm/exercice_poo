@@ -43,3 +43,4 @@ class Hero:
         :return: booléenne qui indique si l'héro est vivant
         """
         return (0 < self.vie)
+
