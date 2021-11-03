@@ -22,24 +22,29 @@ class Hero:
 
     def attaque(self, target_hero):
         """
-        Attaquer un héro
+        faire une attaque. Retourne une valeur de 1d6 plus la force d’attaque
         :param target_hero: L'héro à attaquer
         :return: None
         """
         target_hero.dommages(random.randint(1, 6) + self.force_attaque)
+        if target_hero.est_vivant():
+            print("Target is still alive")
+        else:
+            print("Target dies")
 
     def dommages(self, dommage):
         """
-        Recevoir la dommage
+        recevoir des dommages. Accepte en paramètre le nombre de dommage.
+        hp -= dommage - force_defense
         :param dommage: Dommage reçu
         :return: None
         """
         self.vie -= dommage - self.force_defense
-        print(f"Hero {self.nom} got damage, {self.vie} heart left")
+        print(f"Hero {self.nom} got damage, {self.vie} hp left")
 
     def est_vivant(self):
         """
-        Si l'héro est vivant
+        méthode est_vivant qui retourne une booléenne qui est logiquement associée au nom de la méthode
         :return: booléenne qui indique si l'héro est vivant
         """
         return 0 < self.vie
