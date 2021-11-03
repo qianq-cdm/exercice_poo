@@ -3,8 +3,8 @@ class StringFoo:
     La classe de String
     """
 
-    # String sauvegardé
-    string: str
+    def __init__(self):
+        self.string = ""
 
     def set_string(self, string):
         """

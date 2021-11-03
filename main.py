@@ -25,4 +25,5 @@ print(f"Aire de cercle: {cercle.calcul_aire()}")
 print(f"Circonference de cercle: {cercle.calcul_circonference()}")
 
 # Test Hero
-hero = Hero("Austin")
+hero_1 = Hero("Austin")
+hero_2 = Hero("Michael")

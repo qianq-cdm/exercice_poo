@@ -7,19 +7,18 @@ class Hero:
     Class de héro
     """
 
-    # nombre point de vie
-    vie = random.randint(1, 10) + random.randint(1, 10)
-    # force d’attaque
-    attaque = random.randint(1, 6)
-    # force défense
-    defense = random.randint(1, 6)
-
     def __init__(self, nom):
         """
         Initializer la class hero et lui donnant un nom
         :param nom: Nom de héro
         """
         self.nom = nom
+        # nombre point de vie
+        self.vie = random.randint(1, 10) + random.randint(1, 10)
+        # force d’attaque
+        self.attaque = random.randint(1, 6)
+        # force défense
+        self.defense = random.randint(1, 6)
 
     def attaque(self, target_hero):
         """
@@ -36,6 +35,7 @@ class Hero:
         :return: None
         """
         self.vie -= dommage - self.defense
+        print(f"Hero {self.nom} got damage, {self.vie} heart left")
 
     def est_vivant(self):
         """

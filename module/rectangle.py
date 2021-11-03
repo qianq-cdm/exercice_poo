@@ -3,9 +3,6 @@ class Rectangle:
     La classe de Rectangle
     """
 
-    # Aire de rectangle
-    aire: float
-
     def __init__(self, largeur, longueur):
         """
         Initializer une classe rectangle
@@ -14,6 +11,7 @@ class Rectangle:
         """
         self.largeur = largeur
         self.longueur = longueur
+        self.aire = 0
 
     def calcul_aire(self):
         """
