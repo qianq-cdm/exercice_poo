@@ -16,9 +16,9 @@ class Hero:
         # nombre point de vie
         self.vie = random.randint(1, 10) + random.randint(1, 10)
         # force d’attaque
-        self.attaque = random.randint(1, 6)
+        self.force_attaque = random.randint(1, 6)
         # force défense
-        self.defense = random.randint(1, 6)
+        self.force_defense = random.randint(1, 6)
 
     def attaque(self, target_hero):
         """
@@ -26,7 +26,7 @@ class Hero:
         :param target_hero: L'héro à attaquer
         :return: None
         """
-        target_hero.dommages(random.randint(1, 6) + self.attaque)
+        target_hero.dommages(random.randint(1, 6) + self.force_attaque)
 
     def dommages(self, dommage):
         """
@@ -34,7 +34,7 @@ class Hero:
         :param dommage: Dommage reçu
         :return: None
         """
-        self.vie -= dommage - self.defense
+        self.vie -= dommage - self.force_defense
         print(f"Hero {self.nom} got damage, {self.vie} heart left")
 
     def est_vivant(self):

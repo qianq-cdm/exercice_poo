@@ -27,3 +27,4 @@ print(f"Circonference de cercle: {cercle.calcul_circonference()}")
 # Test Hero
 hero_1 = Hero("Austin")
 hero_2 = Hero("Michael")
+hero_1.attaque(hero_2)
